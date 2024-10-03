@@ -2,8 +2,8 @@
 void main () {
   
   //"new" es opcional new Hero ('Logan')...
-  final Hero wolverine = new Hero('Logan', 'Regeneracion'); // crear instancia del heroe //tipo Hero
-  print ( wolverine );
+  final Hero wolverine = new Hero(name:'Logan', power: 'Regeneracion'); // crear instancia del heroe //tipo Hero
+  print ( wolverine.toString() );
   print ( wolverine.name);
   print ( wolverine.power);
 }
@@ -29,6 +29,12 @@ class Hero {
  inicializar en dart */
   
   //INICIALIZACION RAPIDA
-  Hero ( this.name, this.power);
-}
-
+  Hero ({ 
+    required this.name, 
+    this.power = 'Sin poder' });
+  
+  //OVERRIDE para buena practica para indicar que se sobre escribe algo
+  @override
+ String toString(){
+   return '$name - $power';
+ }
