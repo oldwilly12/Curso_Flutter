@@ -29,7 +29,7 @@ class Square {
  double _side; //side * side para convertir side en propiedad privada se escribiria de la siguiente manera _side
   
   Square({ required double side })
-    : assert (side >= 0, 'side must be >= 0') 
+    : assert (side >= 0, 'side must be >= 0'), 
     _side = side;
   
   double get area {
